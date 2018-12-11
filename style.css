@@ -75,5 +75,27 @@ body {
 }
 
 .custom {
-  max-width:200px;
+  max-width:270px;
+  font-size:25px;
+  margin:0px 15px 0px 15px;
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  /*whatever width you want*/
 }
