@@ -99,3 +99,11 @@ body {
   margin-right: auto;
   /*whatever width you want*/
 }
+
+.btn-basic{
+  background-color: #D3D3D3; 
+}
+
+.btn-basic:hover{
+  background-color: gray; 
+}
