@@ -1,7 +1,10 @@
 body {
     padding-top: 50px;
 }
+div.parentElement{text-align: center;}
 
+
+}
 .material-icons{
   ;
 }
