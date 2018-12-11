@@ -2,6 +2,10 @@ body {
     padding-top: 50px;
 }
 
+.material-icons{
+  ;
+}
+
 .sticky-offset {
     top: 13%;
 }
