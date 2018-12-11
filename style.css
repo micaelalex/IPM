@@ -18,7 +18,7 @@ div.parentElement{text-align: center;}
     margin-right:0;
 }
 #sidebar-container {
-    min-height: 100vh;   
+    min-height: 100vh;
     background-color: #333;
     padding: 0;
 }
@@ -56,7 +56,7 @@ div.parentElement{text-align: center;}
     height: 25px;
 }
 .logo-separator {
-    background-color: #333;    
+    background-color: #333;
     height: 60px;
 }
 
@@ -75,4 +75,30 @@ div.parentElement{text-align: center;}
   display: inline;
   text-align: right;
   padding-left: 10px;
+}
+
+.custom {
+  max-width:270px;
+  font-size:25px;
+  margin:0px 15px 0px 15px;
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  /*whatever width you want*/
 }
