@@ -104,9 +104,16 @@ div.parentElement{text-align: center;}
 }
 
 .btn-basic{
-  background-color: #D3D3D3; 
+  background-color: #D3D3D3;
+  color:black;
 }
 
 .btn-basic:hover{
   background-color: gray; 
+  color:black;
+}
+
+.thead-our{
+  background-color: #343a40;
+  color:white;
 }
