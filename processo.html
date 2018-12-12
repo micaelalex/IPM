@@ -17,9 +17,10 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-
-
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
   <title>GPD</title>
 
@@ -132,8 +133,13 @@
 
  <div class="container-fluid">
     <!-- Control the column width, and how they should appear on different devices -->
-    <div class="row">
-      <div class="col-sm-12 px-6"><span style="margin-left: 15px;">Filtrar</span><span>Pesquisar</span></div>
+    <div class="row" style="margin-left: 15px;">
+      <div class="col- py-3">
+        <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%; ">
+      <i class="fa fa-calendar"></i>&nbsp;
+      <span></span> <i class="fa fa-caret-down"></i>
+  </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-sm-12" >
@@ -265,6 +271,71 @@
     </div>
     <!-- Main Col END -->
 </div>
+
+<script type="text/javascript">
+$(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('DD/MM/YYYY HH:mm') + ' - ' + end.format('DD/MM/YYYY HH:mm'));
+    }
+
+    $('#reportrange').daterangepicker({
+      "timePicker": true,
+      "timePicker24Hour": true,
+      "locale": {
+              "format": "DD/MM/YYYY HH:mm",
+              "separator": " - ",
+              "applyLabel": "Aplicar",
+              "cancelLabel": "Cancelar",
+              "fromLabel": "De",
+              "toLabel": "Até",
+              "customRangeLabel": "Personalizar",
+              "weekLabel": "S",
+              "daysOfWeek": [
+                  "Dom",
+                  "Seg",
+                  "Ter",
+                  "Qua",
+                  "Qui",
+                  "Sex",
+                  "Sáb"
+              ],
+              "monthNames": [
+                "Janeiro",
+                "Fevereiro",
+                "Março",
+                "Abril",
+                "Maio",
+                "Junho",
+                "Julho",
+                "Agosto",
+                "Setembro",
+                "Outubro",
+                "Novembro",
+                "Dezembro"
+              ],
+              "firstDay": 1
+          },
+
+        startDate: start,
+        endDate: end,
+        ranges: {
+           'Hoje': [moment(), moment()],
+           'Ontem': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Últimos 7 dias': [moment().subtract(6, 'days'), moment()],
+           'Últimos 30 dias': [moment().subtract(29, 'days'), moment()],
+           'Este Mês': [moment().startOf('month'), moment().endOf('month')],
+           'Último Mês': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+});
+</script>
 
 </body>
 </html>
