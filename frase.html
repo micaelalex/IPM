@@ -3,31 +3,37 @@
 
 
 <head>
-  <meta charset="utf-8">
+
+ <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="sidebar.css">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 
 
   <title>GPD</title>
 
-  <style type="text/css">
-  	.custom {
-    	max-width:200px;
-	}
 
-  </style>
+<style type="text/css">
+    .custom {
+      max-width:200px;
+    }
+</style>
 
 </head>
 <body>
 
 <!-- HORIZONTAL NAVBAR -->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
   <a class="navbar-brand" href="#">GPD</a>
    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
@@ -42,15 +48,6 @@
 </nav>
 
 
-<!-- Content -->
-
-
-
-
-
-
-
-
 <!-- Bootstrap row -->
 <div class="row" id="body-row">
     <!-- Sidebar -->
@@ -59,49 +56,24 @@
         <!-- Bootstrap List Group -->
         <ul class="list-group sticky-top sticky-offset">
             <!-- Separator with title -->
-            <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
-                <small>MENU PRINCIPAL</small>
-            </li>
+            </li class="active">
             <!-- /END Separator -->
-            
-            <!-- Agrupamento,parão e frase -->
-            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+            <a href="#" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-dashboard fa-fw mr-3"></span>
+                    <span class="fa fa-tasks fa-fw mr-3"></span>
                     <span class="menu-collapsed">Agrupamento</span>
                 </div>
             </a>
-
-            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+            <a href="#" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-dashboard fa-fw mr-3"></span>
+                    <span class="fa fa-tasks fa-fw mr-3"></span>
                     <span class="menu-collapsed">Padrão</span>
                 </div>
             </a>
-
-            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Frase</span>
-                </div>
-            </a>
-            <!--END Agrupamento,parão e frase -->
-            
-            <!-- Separator with title -->
-            <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
-                <small>OPÇÕES</small>
-            </li>
-            <!-- /END Separator -->
             <a href="#" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-calendar fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Calendário</span>
-                </div>
-            </a>
-            <a href="#" class="bg-dark list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-envelope-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Messagens <span class="badge badge-pill badge-primary ml-2">5</span></span>
+                    <span class="fa fa-tasks fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Frases</span>
                 </div>
             </a>
             <!-- Separator without title -->
@@ -109,20 +81,177 @@
             <!-- /END Separator -->
             <a href="#" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fas fa-envelope fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Mensagens<span class="badge badge-pill badge-primary ml-2">5</span></span>
+                </div>
+            </a>
+            <a href="#" class="bg-dark list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-question fa-fw mr-3"></span>
                     <span class="menu-collapsed">Ajuda</span>
                 </div>
-            </a> 
+            </a>
         </ul>
         <!-- List Group END-->
     </div>
     <!-- sidebar-container END -->
 
+    <!-- MAIN -->
+    <div class="col py-3">
+
+        <a style="margin-left: 30px;"class="btn btn-basic" role="button" href="google.com">
+            <span ><i class="fas fa-plus-circle"></i> </span>
+            <span style="text-align:center;"><b>Criar</b></span>
+        </a>
+
+      <a class="btn btn-basic" href="">
+        <span ><i class="fas fa-edit"></i> </span>
+        <span style=" text-align:center;"><b>Editar</b></span>
+      </a>
+
+      <a class="btn btn-basic" href="">
+        <span ><i class="fas fa-code-branch"></i> </span>
+        <span style=" text-align:center;"><b>Juntar</b></span>
+      </a>
+
+      <a class="btn btn-basic" href="">
+        <span ><i class="fas fa-trash-alt"></i> </span>
+        <span style=" text-align:center;"><b>Eliminar</b></span>
+      </a>
+
+      <div class="container-fluid">
+    <!-- Control the column width, and how they should appear on different devices -->
+    <div class="row">
+      <div class="col-sm-12 px-6"><span style="margin-left: 15px;">Filtrar</span><span>Pesquisar</span><span>Ordenar</span></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" >
+        <div class="container-fluid">
+          <table class="table">
+    <col width ="50">
+    <col width ="130">
+    <col width ="130">
+    <col width ="130">
+    <col>
+    <col width ="50">
+    <col width ="50">
+    <col width ="50">
+  
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+              <i class="fas fa-arrow-alt-circle-down"></i>
+          </label>
+        </div>
+      </th>
+      <th scope="col">Sujeito</th>
+      <th scope="col">Ação</th>
+      <th scope="col">Verbo</th>
+      <th scope="col">Artefacto</th>
+      <th scope="col">Recurso</th>
+      <th scope="col">Agrupamento</th>
+      <th scope="col">Data</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="">
+          </label>
+        </div>
+      </th>
+      <td>Luis(CH)</td>
+      <td>Produtiva</td>
+      <td>produziu</td>
+      <td>1000 sapatos</td>
+      <td>---</td>
+      <td>---</td>
+      <td>20:00</td>
+    </tr>
+    
+    <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="">
+          </label>
+        </div>
+      </th>
+      <td>João(CH)</td>
+      <td>Produtiva</td>
+      <td>produziu</td>
+      <td>1000 sapatos</td>
+      <td>---</td>
+      <td>---</td>
+      <td>20:00</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="">
+          </label>
+        </div>
+      </th>
+      <td>Muhhamed(IN)</td>
+      <td>Produtiva</td>
+      <td>produziu</td>
+      <td>800 sapatos</td>
+      <td>---</td>
+      <td>---</td>
+      <td>20:00</td>
+    </tr>
+      <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="">
+          </label>
+        </div>
+      </th>
+      <td>Ahmed(IN)</td>
+      <td>Produtiva</td>
+      <td>produziu</td>
+      <td>800 sapatos</td>
+      <td>---</td>
+      <td>---</td>
+      <td>20:00</td>
+    </tr>
+    
+  </tbody>
+</table>
     
 
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Or let Bootstrap automatically handle the layout -->
+    <div class="row">
+      <div class="col-sm-12 text-center" >
+        <a class="btn btn-dark disabled" href="#"><b>Anterior</b></a>
+        <a class="btn btn-basic" href="#"><b>1</b></a>
+        <a class="btn btn-dark disabled" href="#"><b>Próximo</b></a>
+      </div>
+    </div>
+  </div>
+
+    </div>
+    <!-- Main Col END -->
 </div>
-<!-- body-row END -->
-</div>
+   
+      
+
+    </div>
+    <!-- Main Col END -->
 
 
 </body>
