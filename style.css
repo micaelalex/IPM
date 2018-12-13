@@ -131,3 +131,14 @@ div.parentElement{text-align: center;}
 .daterangepicker td.in-range {
   background-color: #D3D3D3;
 }
+
+
+.form-control {
+  height: 36px;
+  border-radius: 0px;
+}
+
+.:focus {
+  border-color: grey;
+  outline: 0;
+}
