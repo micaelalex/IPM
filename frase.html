@@ -21,6 +21,11 @@
 
 
   <title>GPD</title>
+  <script type="text/javascript">
+    $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+    })
+  </script>
 
 
 <style type="text/css">
@@ -58,7 +63,7 @@
             <!-- Separator with title -->
             </li class="active">
             <!-- /END Separator -->
-            <a href="#" class="bg-dark list-group-item list-group-item-action">
+            <a href="agrupamento_vazio.html" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-tasks fa-fw mr-3"></span>
                     <span class="menu-collapsed">Agrupamento</span>
@@ -73,7 +78,7 @@
             <a href="#" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-tasks fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Frases</span>
+                    <span class="menu-collapsed">Frase</span>
                 </div>
             </a>
             <!-- Separator without title -->
@@ -99,13 +104,13 @@
     <!-- MAIN -->
     <div class="col py-3">
 
-        <a style="margin-left: 30px;"class="btn btn-basic" role="button" href="google.com">
-            <span ><i class="fas fa-plus-circle"></i> </span>
-            <span style="text-align:center;"><b>Criar Agrupamento</b></span>
-        </a>
+        <button style="margin-left: 30px;" type="button" class="btn btn-basic" data-toggle="modal" data-target="#exampleModal">
+        <span ><i class="fas fa-plus-circle"></i> </span>
+        <span style="text-align:center;"><b>Criar agrupamento</b></span>
+        </button>
 
-      <a class="btn btn-basic" href="">
-        <span ><i class="fas fa-edit"></i> </span>
+      <a class="btn btn-basic " href="" >
+        <span ><i  class="fas fa-edit"></i> </span>
         <span style=" text-align:center;"><b>Editar</b></span>
       </a>
 
@@ -114,11 +119,125 @@
         <span style=" text-align:center;"><b>Eliminar</b></span>
       </a>
 
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Criar agrupamento</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!--CONTENT-->
+      <div class="form-group row">
+          <label for="usr" class="col-sm-2 col-form-label">Nome:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="usr" name="username" value=" " required>
+          </div>
+      </div>
+      
+      <div class="form-group row">
+        <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Descrição:</label>
+        <div class="col-sm-10">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" required> </textarea>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Organização:</label>
+        <div class="col-sm-10">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" required></textarea>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Simbolo:</label>
+        <div class="col-sm-10">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" required></textarea>
+        </div>
+      </div>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-basic mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#CancelarModal">Cancelar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#ConfirmarModal">Criar e guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+            <!-- Modal confirmar -->
+<div class="modal fade" id="ConfirmarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confimar criação de agrupamento</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!--CONTENT-->
+        <p>Pretender criar o agrupamento?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-basic mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Cancelar</button>
+        <a href="frase.html" class="btn btn-success">Confirmar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!--filtrar-->
+    <div class="row pt-3" style="margin-left: 30px;">
+      <div class="col- ">
+        <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%; ">
+      <i class="fa fa-calendar"></i>&nbsp;
+      <span></span> <i class="fa fa-caret-down"></i>
+  </div>
+</div>
+      <div class="col-">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+      </div>
+    </div>
+
+<!-- Modal confirmar -->
+<div class="modal fade" id="CancelarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cancelar criação de Processo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!--CONTENT-->
+        <p>Você não irá criar nenhum processo, continuar?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-basic mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Cancelar</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Continuar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
       <div class="container-fluid">
     <!-- Control the column width, and how they should appear on different devices -->
-    <div class="row">
-      <div class="col-sm-12 px-6"><span style="margin-left: 15px;">Filtrar</span><span>Pesquisar</span><span>Ordenar</span></div>
-    </div>
+    
     <div class="row">
       <div class="col-sm-12" >
         <div class="container-fluid">
