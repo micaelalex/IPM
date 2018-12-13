@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+  
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
@@ -22,8 +22,15 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
-  <title>GPD</title>
 
+
+
+  <title>GPD</title>
+  <script type="text/javascript">
+    $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+    })
+</script>
   <style type="text/css">
   	.custom {
     	max-width:200px;
@@ -110,22 +117,104 @@
 
     <!-- MAIN -->
     <div class="col py-3">
-      <a  class="btn btn-basic" style="margin-left: 30px;"role="button">
+      <button type="button" style="margin-left: 30px;" class="btn btn-basic" data-toggle="modal" data-target="#exampleModal">
         <span ><i class="fas fa-plus-circle"></i> </span>
         <span style="text-align:center;"><b>Criar</b></span>
-      </a>
+      </button>
 
-      <a class="btn btn-basic ">
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Criar Processo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!--CONTENT-->
+      <div class="form-group row">
+          <label for="usr" class="col-sm-2 col-form-label">Nome:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="usr" name="username" value="Gestão de cursos" required>
+          </div>
+      </div>
+      <div class="form-group row">
+        <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Descrição:</label>
+        <div class="col-sm-10">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required>Este processo é sobre as diferentes ações que podemos ter em relação aos...</textarea>
+        </div>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#CancelarModal">Cancelar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#ConfirmarModal">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+            <!-- Modal confirmar -->
+<div class="modal fade" id="ConfirmarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confimar criação de Processo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!--CONTENT-->
+        Pretender criar o processo "Gestão de cursos"?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Cancelar</button>
+        <a href="processo.html" class="btn btn-primary">Confirmar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal confirmar -->
+<div class="modal fade" id="CancelarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confimar criação de Processo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!--CONTENT-->
+        Você irá cancelar a criação do processo, é isso que dejesa?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Não</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Sim</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <a class="btn btn-basic disabled">
         <span ><i class="fas fa-edit"></i> </span>
         <span style=" text-align:center;"><b>Editar</b></span>
       </a>
 
-      <a class="btn btn-basic">
+      <a class="btn btn-basic disabled">
         <span ><i class="fas fa-trash-alt"></i> </span>
         <span style=" text-align:center;"><b>Eliminar</b></span>
       </a>
 
-      <a class="btn btn-basic float-right" style="margin-right: 30px;" >
+      <a class="btn btn-basic disabled float-right" style="margin-right: 30px;" >
         <span ><i class="fas fa-link"></i> </span>
         <span style=" text-align:center;"><b>Associar</b></span>
       </a>
@@ -136,9 +225,9 @@
     <div class="row" style="margin-left: 15px;">
       <div class="col- py-3">
         <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%; ">
-      <i class="fa fa-calendar"></i>&nbsp;
-      <span></span> <i class="fa fa-caret-down"></i>
-  </div>
+          <i class="fa fa-calendar"></i>&nbsp;
+            <span></span> <i class="fa fa-caret-down"></i>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -165,18 +254,6 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">
-        <div class="form-check">
-          <label class="form-check-label" >
-            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" checked>
-          </label>
-        </div>
-      </th>
-      <td>Gestão de c...</td>
-      <td>Este processo é sobre as diferentes ações que podemos ter em relação aos...</td>
-      <td>12/12/2018 22:34</td>
-    </tr>
     <tr>
       <th scope="row">
         <div class="form-check">
@@ -213,7 +290,7 @@
       <td>Processo que fala sobre...</td>
       <td>12/12/2018 10:00</td>
     </tr>
-    <tr>
+      <tr>
       <th scope="row">
         <div class="form-check">
           <label class="form-check-label" >
@@ -249,7 +326,19 @@
       <td></td>
       <td></td>
     </tr>
-
+    <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" disabled>
+          </label>
+        </div>
+      </th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
   </tbody>
 </table>
 
@@ -271,71 +360,6 @@
     </div>
     <!-- Main Col END -->
 </div>
-
-<script type="text/javascript">
-$(function() {
-
-    var start = moment().subtract(29, 'days');
-    var end = moment();
-
-    function cb(start, end) {
-        $('#reportrange span').html(start.format('DD/MM/YYYY HH:mm') + ' - ' + end.format('DD/MM/YYYY HH:mm'));
-    }
-
-    $('#reportrange').daterangepicker({
-      "timePicker": true,
-      "timePicker24Hour": true,
-      "locale": {
-              "format": "DD/MM/YYYY HH:mm",
-              "separator": " - ",
-              "applyLabel": "Aplicar",
-              "cancelLabel": "Cancelar",
-              "fromLabel": "De",
-              "toLabel": "Até",
-              "customRangeLabel": "Personalizar",
-              "weekLabel": "S",
-              "daysOfWeek": [
-                  "Dom",
-                  "Seg",
-                  "Ter",
-                  "Qua",
-                  "Qui",
-                  "Sex",
-                  "Sáb"
-              ],
-              "monthNames": [
-                "Janeiro",
-                "Fevereiro",
-                "Março",
-                "Abril",
-                "Maio",
-                "Junho",
-                "Julho",
-                "Agosto",
-                "Setembro",
-                "Outubro",
-                "Novembro",
-                "Dezembro"
-              ],
-              "firstDay": 1
-          },
-
-        startDate: start,
-        endDate: end,
-        ranges: {
-           'Hoje': [moment(), moment()],
-           'Ontem': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-           'Últimos 7 dias': [moment().subtract(6, 'days'), moment()],
-           'Últimos 30 dias': [moment().subtract(29, 'days'), moment()],
-           'Este Mês': [moment().startOf('month'), moment().endOf('month')],
-           'Último Mês': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        }
-    }, cb);
-
-    cb(start, end);
-
-});
-</script>
 
 </body>
 </html>
