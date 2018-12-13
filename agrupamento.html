@@ -120,17 +120,32 @@
       </a>
 
       <div class="container-fluid">
-    <!-- Control the column width, and how they should appear on different devices -->
-    <div class="row">
-      <div class="col-sm-12 px-6"><span style="margin-left: 15px;">Filtrar</span><span>Pesquisar</span><span>Ordenar</span></div>
+      
+      <!--filtrar-->
+    <div class="row pt-3" style="margin-left: 15px;">
+      <div class="col- ">
+        <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%; ">
+      <i class="fa fa-calendar"></i>&nbsp;
+      <span></span> <i class="fa fa-caret-down"></i>
+  </div>
+</div>
+      <div class="col-">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+      </div>
     </div>
+
+
+    <!-- Control the column width, and how they should appear on different devices -->
+    
     <div class="row">
       <div class="col-sm-12" >
         <div class="container-fluid">
           <table class="table">
           	<col width ="30">
           	<col width ="105">
-          	<col width ="100">
+          	<col width ="50">
           	<col>
           	<col width ="80">
   <thead class="thead-dark">
@@ -150,7 +165,19 @@
     </tr>
   </thead>
   <tbody>
-
+    <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="">
+          </label>
+        </div>
+      </th>
+      <td>x</td>
+      <td>Produção</td>
+      <td>Trabalhadores CH e IN</td>
+      <td>23:08</td>
+    </tr>
     <tr>
       <th scope="row">
         <div class="form-check">
