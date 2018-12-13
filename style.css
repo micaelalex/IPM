@@ -109,11 +109,25 @@ div.parentElement{text-align: center;}
 }
 
 .btn-basic:hover{
-  background-color: gray; 
+  background-color: gray;
   color:black;
 }
 
 .thead-our{
   background-color: #343a40;
   color:white;
+}
+
+/** Calendar **/
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+  background-color: #343a40;
+}
+
+.daterangepicker .ranges li.active {
+  background-color: #343a40;
+}
+
+.daterangepicker td.in-range {
+  background-color: #D3D3D3;
 }
