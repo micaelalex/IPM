@@ -104,27 +104,27 @@
     <!-- MAIN -->
     <div class="col py-3">
     	<p style="margin-left: 30px;">GPD/Analista/Padrão</p>
-        <a style="margin-left: 30px;" class="btn btn-basic" role="button" href="frase.html">
-            <span ><i class="fas fa-plus-circle"></i> </span>
-            <span style="text-align:center;"><b>Criar</b></span>
-        </a>
+      <button type="button" style="margin-left: 30px;" class="btn btn-basic" data-toggle="modal" data-target="#exampleModal">
+        <span ><i class="fas fa-plus-circle"></i> </span>
+        <span style="text-align:center;"><b>Criar</b></span>
+      </button>
 
       <a class="btn btn-basic" href="">
         <span ><i class="fas fa-edit"></i> </span>
         <span style=" text-align:center;"><b>Editar</b></span>
       </a>
 
-      <button type="button" class="btn btn-basic" data-toggle="modal" data-target="#exampleModal">
-        <span ><i class="fas fa-code-branch"></i> </span>
-        <span style="text-align:center;"><b>Juntar</b></span>
-      </button>
+      <a href="processo_associar.html" class="btn btn-basic float-right" style="margin-right: 30px;" >
+        <span ><i class="fas fa-link"></i> </span>
+        <span style=" text-align:center;"><b>Associar</b></span>
+      </a>
 
       <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Juntar Agrupamentos</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Criar Padrão</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -133,23 +133,24 @@
       <div class="modal-body">
         <!--CONTENT-->
       <div class="form-group row">
-          <label for="usr" class="col-sm-3 col-form-label">Nome:</label>
+          <label for="usr" class="col-sm-3 col-form-label">Nome:<font color="red">*</font></label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" id="usr" name="username" value="Produção" required>
+            <input type="text" class="form-control" id="usr" name="username" value="Propostas de Curso" required>
           </div>
       </div>
 
       <div class="form-group row">
-        <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Descrição:</label>
+        <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Descrição:<font color="red">*</font> </label>
         <div class="col-sm-9">
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" required>Trabalhadores CH e IN</textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" required>Aceita/Rejeita Propostas de Curso</textarea>
         </div>
       </div>
 
       <div class="form-group row">
-        <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Organização:</label>
+        <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Desenho:</label>
         <div class="col-sm-9">
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" required>NIKE</textarea>
+          <input type="file" class="custom-file-input" id="customFileLang" lang="pt">
+          <label class="custom-file-label" for="customFileLang">Selecionar Ficheiro</label>
         </div>
       </div>
 
@@ -158,7 +159,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-basic mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#CancelarModal">Cancelar</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#ConfirmarModal">Criar e guardar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#ConfirmarModal">Criar</button>
       </div>
     </div>
   </div>
@@ -170,7 +171,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confimar criação de agrupamento</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Confimar Criação de Padrão</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -178,7 +179,7 @@
 
       <div class="modal-body">
         <!--CONTENT-->
-        <p>Pretender criar o agrupamento "Trabalhadores CH e IN"?</p>
+        <p>Pretender criar o Padrão "Propostas de Curso"?</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-basic mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Cancelar</button>
@@ -226,6 +227,13 @@
   </div>
 </div>
 
+
+<div class="selectParent">
+     <select>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+     </select>
+ </div>
 
       <div class="col- ">
   <div class="form-group ml-2">
