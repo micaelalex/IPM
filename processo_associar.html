@@ -43,7 +43,7 @@
 
 <!-- HORIZONTAL NAVBAR -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <a class="navbar-brand" href="#"><b>GPD</b></a>
+  <a  href="index.html" class="navbar-brand" ><b>GPD</b></a>
    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -123,11 +123,11 @@
       </button>
 
       <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal fade bd-example-modal-lg " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Criar Associação</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Associar - "Gestão de Curso"</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -135,23 +135,159 @@
 
       <div class="modal-body">
         <!--CONTENT-->
-      <div class="form-group row">
-          <label for="usr" class="col-sm-2 col-form-label">Nome:</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="usr" name="username" value="Gestão de cursos" required>
-          </div>
-      </div>
-      <div class="form-group row">
-        <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Descrição:</label>
-        <div class="col-sm-10">
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required>Este processo é sobre as diferentes ações que podemos ter em relação aos...</textarea>
+        <p>Selecione as atividades que pretende associar ao processo: </p>
+
+         <div class="container-fluid">
+          <!-- Control the column width, and how they should appear on different devices -->
+            <div class="row pt-3" style="margin-left: 15px;">
+              <div class="col-">
+                <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%; ">
+                  <i class="fa fa-calendar"></i>&nbsp;
+                  <span></span> <i class="fa fa-caret-down"></i>
+                </div>
+              </div>
+              <div class="col- ">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+              </div>
+            </div>
+
+            <!-- table modal -->
+
+                <div class="row">
+      <div class="col-sm-12" >
+        <div class="container-fluid">
+          <table class="table">
+            <col width="50">
+        <col width="130">
+        <col>
+        <col width="150">
+  <thead class="thead-our">
+    <tr>
+      <th scope="col">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+              <i class="fas fa-angle-down"></i>
+          </label>
+        </div>
+      </th>
+      <th scope="col">Nome <i class="fas fa-angle-down"></i></th>
+      <th scope="col">Descrição <i class="fas fa-angle-down"></i></th>
+      <th scope="col">Data <i class="fas fa-angle-down"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" checked>
+          </label>
+        </div>
+      </th>
+      <td>Propor cursos novos</td>
+      <td>Esta atividade é relativamente à ...</td>
+      <td>10/12/2018 11:00</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" checked>
+          </label>
+        </div>
+      </th>
+      <td>Monotorizar cursos existentes</td>
+      <td>Esta atividade é relativamente à ...</td>
+      <td>10/12/2018 11:00</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" checked>
+          </label>
+        </div>
+      </th>
+      <td>Avaliar cursos existentes</td>
+      <td>Esta atividade é relativamente à ...</td>
+      <td>10/12/2018 11:00</td>
+    </tr>
+      <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" checked>
+          </label>
+        </div>
+      </th>
+      <td>Pagar a docentes do curso</td>
+      <td>Esta atividade é relativamente à ...</td>
+      <td>10/12/2018 11:00</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" >
+          </label>
+        </div>
+      </th>
+      <td>Comprar bilhetes de avião</td>
+      <td>Esta atividade é relativamente à ...</td>
+      <td>10/12/2018 11:00</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" disabled>
+          </label>
+        </div>
+      </th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <div class="form-check">
+          <label class="form-check-label" >
+            <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" disabled>
+          </label>
+        </div>
+      </th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+  </tbody>
+</table>
+
+
         </div>
       </div>
+    </div>
+
+    <!-- Or let Bootstrap automatically handle the layout -->
+    <div class="row">
+      <div class="col-sm-12 text-center" >
+        <a class="btn btn-basic disabled" href="#"><b>Anterior</b></a>
+        <a class="btn btn-basic " href="#"><b>1</b></a>
+        <a class="btn btn-basic disabled" href="#"><b>Próximo</b></a>
+      </div>
+    </div>
+
+          </div>
+
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#CancelarModal">Cancelar</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#ConfirmarModal">Guardar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#ConfirmarModal">Associar e guardar</button>
       </div>
     </div>
   </div>
@@ -163,7 +299,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confimar criação de Processo</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Confimar associação</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -171,11 +307,17 @@
 
       <div class="modal-body">
         <!--CONTENT-->
-        Pretender criar o processo "Gestão de cursos"?
+        <p>Pretender associar a seguinte lista de atividades ao processo "Gestão de cursos"?</p>
+        <ul>
+          <li>Propor cursos novos</li>
+          <li>Monotorizar cursos existentes</li>
+          <li>Avaliar cursos existentes</li>
+          <li>Pagar a docentes do curso</li>
+        </ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Cancelar</button>
-        <a href="processo.html" class="btn btn-primary">Confirmar</a>
+        <a href="processo_associar_last.html" class="btn btn-primary">Confirmar</a>
       </div>
     </div>
   </div>
@@ -186,7 +328,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confimar criação de Processo</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Cancelar associação</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -194,7 +336,7 @@
 
       <div class="modal-body">
         <!--CONTENT-->
-        Você irá cancelar a criação do processo, é isso que dejesa?
+        <p>Você irá cancelar as associações, é isso que dejesa?</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Não</button>
@@ -212,14 +354,14 @@
 
  <div class="container-fluid">
     <!-- Control the column width, and how they should appear on different devices -->
-    <div class="row" style="margin-left: 15px;">
-      <div class="col- py-2">
+    <div class="row pt-3" style="margin-left: 15px;">
+      <div class="col- ">
         <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%; ">
       <i class="fa fa-calendar"></i>&nbsp;
       <span></span> <i class="fa fa-caret-down"></i>
   </div>
 </div>
-      <div class="col- py-2">
+      <div class="col- ">
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Search">
   </div>
