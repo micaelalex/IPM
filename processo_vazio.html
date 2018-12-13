@@ -65,7 +65,7 @@
         <!-- Bootstrap List Group -->
         <ul class="list-group sticky-top sticky-offset">
             <!-- /END Separator -->
-            <a href="#" class="bg-dark list-group-item list-group-item-action">
+            <a href="processo_vazio.html" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-tasks fa-fw mr-3"></span>
                     <span class="menu-collapsed">Processo</span>
@@ -116,7 +116,10 @@
     <!-- sidebar-container END -->
 
     <!-- MAIN -->
+
+    <!--PATH-->
     <div class="col py-3">
+    <p class="small" style="margin-left: 30px;"><a href="index.html">GPD</a>/<a href="gestor_processos.html">Gestor de processos</a>/<a href="processo_vazio.html">Processo</a></p>
       <button type="button" style="margin-left: 30px;" class="btn btn-basic" data-toggle="modal" data-target="#exampleModal">
         <span ><i class="fas fa-plus-circle"></i> </span>
         <span style="text-align:center;"><b>Criar</b></span>
@@ -365,6 +368,73 @@
     </div>
     <!-- Main Col END -->
 </div>
+
+<script type="text/javascript">
+$(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('DD/MM/YYYY HH:mm') + ' - ' + end.format('DD/MM/YYYY HH:mm'));
+    }
+
+    $('#reportrange').daterangepicker({
+      "timePicker": true,
+      "timePicker24Hour": true,
+      "applyButtonClasses": "btn-secondary",
+      "locale": {
+              "format": "DD/MM/YYYY HH:mm",
+              "separator": " - ",
+              "applyLabel": "Aplicar",
+              "cancelLabel": "Cancelar",
+              "fromLabel": "De",
+              "toLabel": "Até",
+              "customRangeLabel": "Personalizar",
+              "weekLabel": "S",
+              "daysOfWeek": [
+                  "Dom",
+                  "Seg",
+                  "Ter",
+                  "Qua",
+                  "Qui",
+                  "Sex",
+                  "Sáb"
+              ],
+              "monthNames": [
+                "Janeiro",
+                "Fevereiro",
+                "Março",
+                "Abril",
+                "Maio",
+                "Junho",
+                "Julho",
+                "Agosto",
+                "Setembro",
+                "Outubro",
+                "Novembro",
+                "Dezembro"
+              ],
+              "firstDay": 1
+
+          },
+
+        startDate: start,
+        endDate: end,
+        ranges: {
+           'Hoje': [moment(), moment()],
+           'Ontem': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Últimos 7 dias': [moment().subtract(6, 'days'), moment()],
+           'Últimos 30 dias': [moment().subtract(29, 'days'), moment()],
+           'Este Mês': [moment().startOf('month'), moment().endOf('month')],
+           'Último Mês': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+});
+</script>
 
 </body>
 </html>
