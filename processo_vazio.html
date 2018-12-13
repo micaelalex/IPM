@@ -150,7 +150,7 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#CancelarModal">Cancelar</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#ConfirmarModal">Guardar</button>
       </div>
     </div>
@@ -176,6 +176,29 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Cancelar</button>
         <a href="processo.html" class="btn btn-primary">Confirmar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal confirmar -->
+<div class="modal fade" id="CancelarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confimar criação de Processo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!--CONTENT-->
+        Você irá cancelar a criação do processo, é isso que dejesa?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Não</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Sim</button>
       </div>
     </div>
   </div>
