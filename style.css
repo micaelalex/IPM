@@ -1,16 +1,11 @@
 body {
     padding-top: 50px;
+    overflow-y: hidden;
 }
 div.parentElement{text-align: center;}
 
-
-}
-.material-icons{
-  ;
-}
-
 .sticky-offset {
-    top: 13%;
+    top: 10.4%;
 }
 
 #body-row {
@@ -168,4 +163,17 @@ div.parentElement{text-align: center;}
     appearance: none;
     padding: 2px 2px 2px 2px;
     background: transparent url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") no-repeat 60px center;
+}
+
+.list-group-item.active {
+  background-color:#1d2124 !important;
+  border-color: transparent !important;
+}
+
+.ml-45{
+  margin-left: 45px;
+}
+
+:focus {
+  outline:0;
 }

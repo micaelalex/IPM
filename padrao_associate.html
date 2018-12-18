@@ -61,7 +61,7 @@
           <span class="menu-collapsed">Agrupamento</span>
         </div>
       </a>
-      <a href="padrao.html" class="active bg-dark list-group-item list-group-item-action">
+      <a href="padrao_update.html" class="active bg-dark list-group-item list-group-item-action">
         <div class="d-flex w-100 justify-content-start align-items-center">
           <span class="fa fa-tasks fa-fw mr-3"></span>
           <span class="menu-collapsed">Padrão</span>
@@ -96,121 +96,20 @@
   <!-- MAIN -->
   <div class="col py-3">
     <div class="row">
-      <p class="small" style="margin-left: 45px;"><a href="index.html">GPD</a>/<a href="analista.html">Analista</a>/<a href="padrao.html">Padr&atilde;o</a></p>
+      <p class="small" style="margin-left: 45px;"><a href="index.html">GPD</a>/<a href="analista.html">Analista</a>/<a href="padrao_update.html">Padr&atilde;o</a>/<a href="padrao_associate.html">Associar</a></p>
     </div>
     <div class="row">
       <button type="button" style="margin-left: 45px;" class="btn btn-basic" data-toggle="modal" data-target="#exampleModal">
         <span ><i class="fas fa-plus-circle"></i> </span>
-        <span style="text-align:center;"><b>Criar</b></span>
+        <span style="text-align:center;"><b>Criar Associações</b></span>
       </button>
-
-      <a class="btn btn-basic ml-2 disabled" href="">
-        <span ><i class="fas fa-edit"></i> </span>
-        <span style=" text-align:center;"><b>Editar</b></span>
-      </a>
 
       <a class="btn btn-basic col-auto mr-auto ml-2 disabled" href="">
         <span ><i class="fas fa-trash-alt"></i> </span>
         <span style=" text-align:center;"><b>Eliminar</b></span>
       </a>
 
-      <a href="processo_associar.html" class="btn btn-basic disabled float-right" style="margin-right: 30px;" >
-        <span ><i class="fas fa-link"></i> </span>
-        <span style=" text-align:center;"><b>Associar</b></span>
-      </a>
 
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Criar Padrão</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-
-            <div class="modal-body">
-              <!--CONTENT-->
-              <div class="form-group row">
-                <label for="usr" class="col-sm-3 col-form-label">Nome:<font color="red">*</font></label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="usr" name="username" value="Propostas de Curso" required>
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Descrição:<font color="red">*</font> </label>
-                <div class="col-sm-9">
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" required>Aceita/Rejeita Propostas de Curso</textarea>
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Desenho:</label>
-                <div class="col-sm-9">
-                  <input type="file" class="custom-file-input" id="customFileLang" lang="pt">
-                  <label class="custom-file-label" for="customFileLang">Selecionar Ficheiro</label>
-                </div>
-              </div>
-
-
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-basic mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#CancelarModal">Cancelar</button>
-              <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#ConfirmarModal">Criar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Modal confirmar -->
-      <div class="modal fade" id="ConfirmarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Confimar Criação de Padrão</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-
-            <div class="modal-body">
-              <!--CONTENT-->
-              <p>Pretender criar o Padrão "Propostas de Curso"?</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-basic mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Cancelar</button>
-              <a href="padrao_update.html" class="btn btn-success">Confirmar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal confirmar -->
-      <div class="modal fade" id="CancelarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Cancelar criação de Processo</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-
-            <div class="modal-body">
-              <!--CONTENT-->
-              <p>Você não irá criar nenhum processo, continuar?</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-basic mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Cancelar</button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Continuar</button>
-            </div>
-          </div>
-        </div>
-      </div>
 
     </div>
 
@@ -247,13 +146,242 @@
     </div>
   </div>
 
+  <!-- Modal -->
+<div class="modal fade bd-example-modal-lg " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Associar - "Propostas de Curso"</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <!--CONTENT-->
+    <p style="margin-left:30px;">Selecione os agrupamentos que pretende associar ao padrão: </p>
+
+     <div class="container-fluid">
+      <!-- Control the column width, and how they should appear on different devices -->
+        <div class="row mb-3 pt-3" style="margin-left: 15px;">
+          <div class="col- " style="margin-right: 15px">
+            <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%; ">
+              <i class="fa fa-calendar"></i>&nbsp;
+              <span></span> <i class="fa fa-caret-down"></i>
+            </div>
+          </div>
+
+          <select class="demo" multiple="multiple">
+            <optgroup label="Organiza&ccedil;&atilde;o">
+              <option value="cp" selected> UALG</option>
+              <option value="cs">NIKE</option>
+            </optgroup>
+          </select>
+
+          <div class="col-md-3 ml-md-auto" style="margin-right:15px;">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Pesquisar">
+              <span><button><i class="fa fa-search" style="height:30px;width:20px;padding-top:7px;"></i></button></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- table modal -->
+
+            <div class="row">
+  <div class="col-sm-12" >
+    <div class="container-fluid">
+      <table class="table">
+        <col width="50">
+    <col width="130">
+    <col>
+    <col width="150">
+<thead class="thead-our">
+<tr>
+  <th scope="col">
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">
+          <i class="fas fa-angle-down"></i>
+      </label>
+    </div>
+  </th>
+  <th scope="col">Nome <i class="fas fa-angle-down"></i></th>
+  <th scope="col">Descrição <i class="fas fa-angle-down"></i></th>
+  <th scope="col">Data <i class="fas fa-angle-down"></i></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <th scope="row">
+    <div class="form-check">
+      <label class="form-check-label" >
+        <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" checked>
+      </label>
+    </div>
+  </th>
+  <td>a7</td>
+  <td>Frases relacionadas com propostas de curso</td>
+  <td>10/12/2018 11:00</td>
+</tr>
+<tr>
+  <th scope="row">
+    <div class="form-check">
+      <label class="form-check-label" >
+        <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" disabled>
+      </label>
+    </div>
+  </th>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <th scope="row">
+    <div class="form-check">
+      <label class="form-check-label" >
+        <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" disabled>
+      </label>
+    </div>
+  </th>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+  <tr>
+  <th scope="row">
+    <div class="form-check">
+      <label class="form-check-label" >
+        <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" disabled>
+      </label>
+    </div>
+  </th>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <th scope="row">
+    <div class="form-check">
+      <label class="form-check-label" >
+        <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" disabled>
+      </label>
+    </div>
+  </th>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <th scope="row">
+    <div class="form-check">
+      <label class="form-check-label" >
+        <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" disabled>
+      </label>
+    </div>
+  </th>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <th scope="row">
+    <div class="form-check">
+      <label class="form-check-label" >
+        <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" disabled>
+      </label>
+    </div>
+  </th>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+
+</tbody>
+</table>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- Or let Bootstrap automatically handle the layout -->
+<div class="row">
+  <div class="col-sm-12 text-center" >
+    <a class="btn btn-dark disabled" href="#"><b>Anterior</b></a>
+    <a class="btn btn-basic " href="#"><b>1</b></a>
+    <a class="btn btn-dark disabled" href="#"><b>Próximo</b></a>
+  </div>
+</div>
+
+      </div>
+
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#CancelarModal">Cancelar</button>
+    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#ConfirmarModal">Associar e Guardar</button>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Modal confirmar -->
+<div class="modal fade" id="ConfirmarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Confimar associação</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+
+<div class="modal-body">
+<!--CONTENT-->
+<p>Pretender associar a seguinte lista de Agrupamentos ao Padrão "Propostas de Curso"?</p>
+<ul>
+<li>a7</li>
+</ul>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Cancelar</button>
+<a href="padrao_associate_update.html" class="btn btn-success">Confirmar</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal confirmar -->
+<div class="modal fade" id="CancelarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cancelar associação</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!--CONTENT-->
+        <p>Você irá cancelar as associações, é isso que dejesa?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">Não</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Sim</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- Control the column width, and how they should appear on different devices -->
   <div class="row" style="margin-left:1px">
     <div class="col-sm-12" >
       <div class="container-fluid">
         <table class="table">
           <col width="50">
-          <col width="130">
+          <col width="200">
           <col>
           <col width="150">
           <col width="150">
@@ -269,7 +397,6 @@
               </th>
               <th scope="col">Nome <i class="fas fa-angle-down"></i></th>
               <th scope="col">Descrição <i class="fas fa-angle-down"></i></th>
-              <th scope="col">Desenho <i class="fas fa-angle-down"></i></th>
               <th scope="col">Data <i class="fas fa-angle-down"></i></th>
             </tr>
           </thead>
@@ -278,24 +405,10 @@
               <th scope="row">
                 <div class="form-check">
                   <label class="form-check-label" >
-                    <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="">
-                  </label>
-                </div>
-              </th>
-              <td>Pagamentos</td>
-              <td>Gestão de Pagamentos</td>
-              <td> Link  <i class="fas fa-external-link-alt"></i> </td>
-              <td>12/12/2018 22:34</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <div class="form-check">
-                  <label class="form-check-label" >
                     <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value=""disabled>
                   </label>
                 </div>
               </th>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -311,6 +424,17 @@
               <td></td>
               <td></td>
               <td></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <div class="form-check">
+                  <label class="form-check-label" >
+                    <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value=""disabled>
+                  </label>
+                </div>
+              </th>
+              <td></td>
+              <td></td>
               <td></td>
             </tr>
             <tr>
@@ -324,6 +448,17 @@
               <td></td>
               <td></td>
               <td></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <div class="form-check">
+                  <label class="form-check-label" >
+                    <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" disabled>
+                  </label>
+                </div>
+              </th>
+              <td></td>
+              <td></td>
               <td></td>
             </tr>
             <tr>
@@ -337,7 +472,6 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">
@@ -347,20 +481,6 @@
                   </label>
                 </div>
               </th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <div class="form-check">
-                  <label class="form-check-label" >
-                    <input type="checkbox" class="form-check-input" style="margin: -10px; margin-left: -20px;"value="" disabled>
-                  </label>
-                </div>
-              </th>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
