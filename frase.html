@@ -20,6 +20,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="fSelect.css" rel="stylesheet">
 
 
 
@@ -201,19 +202,34 @@
 </div>
 
  <!--filtrar-->
-    <div class="row pt-3" style="margin-left: 30px;">
+    <div class="row pt-3" style="margin-left: 15px;">
       <div class="col- ">
         <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%; ">
       <i class="fa fa-calendar"></i>&nbsp;
       <span></span> <i class="fa fa-caret-down"></i>
   </div>
 </div>
-      <div class="col-">
-   <div class="form-group ml-2">
-    <input type="text" class="form-control" placeholder="Pesquisar" value="Organização=&quot;NIKE&quot; ">
-  </div>
+      <select class="demo" multiple="multiple">
+        <optgroup label="Organiza&ccedil;&atilde;o">
+          <option value="cp" > UALG</option>
+          <option value="cs" selected>NIKE</option>
+        </optgroup>
+      </select>
+
+      <script>
+      $(document).ready(function(){
+        $('.demo').fSelect();
+      })
+    </script>
+
+<div class="col-md-2 ml-md-auto" style="margin-right:15px;">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Pesquisar">
+        <span><button><i class="fa fa-search" style="height:30px;width:20px;padding-top:7px;"></i></button></span>
       </div>
     </div>
+
+    <!--end filtrar-->
 
 <!-- Modal confirmar -->
 <div class="modal fade" id="CancelarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -439,6 +455,7 @@ $(function() {
 });
 </script>
 
+<script src="fSelect.js"></script>
 
 </body>
 </html>

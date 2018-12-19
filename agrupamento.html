@@ -17,6 +17,7 @@
 
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="fSelect.css" rel="stylesheet">
 
 
 
@@ -153,6 +154,9 @@
         </div>
       </div>
 
+
+
+
       <div class="form-group row">
         <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Simbolo:</label>
         <div class="col-sm-9">
@@ -232,11 +236,29 @@
       <span></span> <i class="fa fa-caret-down"></i>
   </div>
 </div>
-      <div class="col-">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
-  </div>
+      <select class="demo" multiple="multiple">
+        <optgroup label="Organiza&ccedil;&atilde;o">
+          <option value="cp" > UALG</option>
+          <option value="cs" selected>NIKE</option>
+        </optgroup>
+      </select>
+
+    <script>
+      $(document).ready(function(){
+        $('.demo').fSelect();
+      })
+    </script>
+
+<div class="col-md-2 ml-md-auto" style="margin-right:15px;">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Pesquisar">
+        <span><button><i class="fa fa-search" style="height:30px;width:20px;padding-top:7px;"></i></button></span>
       </div>
+    </div>
+
+    <!--end filtrar-->
+      <!-- Initialize the plugin: -->
+
     </div>
     
     <!-- Control the column width, and how they should appear on different devices -->
@@ -340,6 +362,6 @@
     </div>
     <!-- Main Col END -->
 
-
+<script src="fSelect.js"></script>
 </body>
 </html>
