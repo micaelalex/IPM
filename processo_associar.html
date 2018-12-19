@@ -21,6 +21,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<link href="fSelect.css" rel="stylesheet">
 
 
 
@@ -147,11 +148,12 @@
                   <span></span> <i class="fa fa-caret-down"></i>
                 </div>
               </div>
-              <div class="col- ">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search">
-                </div>
-              </div>
+        <div class="col-md-2 ml-md-auto" style="margin-right:15px;">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Pesquisar">
+        <span><button><i class="fa fa-search" style="height:30px;width:20px;padding-top:7px;"></i></button></span>
+      </div>
+    </div>
             </div>
 
             <!-- table modal -->
@@ -362,11 +364,27 @@
       <span></span> <i class="fa fa-caret-down"></i>
   </div>
 </div>
-      <div class="col- ml-2" value="">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Pesquisar" value="Organização=&quot;UALG&quot;">
-  </div>
+     <div class="col- ml-2">
+              <select class="demo" multiple="multiple">
+        <optgroup label="Organiza&ccedil;&atilde;o">
+          <option value="cp" selected> UALG</option>
+          <option value="cs">NIKE</option>
+        </optgroup>
+      </select>
+
+      <!-- Initialize the plugin: -->
+      <script>
+      $(document).ready(function(){
+        $('.demo').fSelect();
+      })
+    </script>
       </div>
+        <div class="col-md-2 ml-md-auto" style="margin-right:15px;">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Pesquisar">
+        <span><button><i class="fa fa-search" style="height:30px;width:20px;padding-top:7px;"></i></button></span>
+      </div>
+    </div>
     </div>
     <div class="row">
       <div class="col-sm-12" >
@@ -565,5 +583,6 @@ $(function() {
 
 });
 </script>
+ <script src="fSelect.js"></script>
 </body>
 </html>
